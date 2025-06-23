@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Goley Tailor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Goley Tailor</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Showcasing Our Finest Work</p>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-main">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Custom Suits -->
+                <div class="gallery-item" data-category="suits">
+                    <img src="images/IMG-20250606-WA0009.jpg" alt="Navy Blue Custom Suit">
+                    <div class="gallery-overlay">
+                        <h3>Navy Blue Custom Suit</h3>
+                        <p>Bespoke three-piece suit with peak lapels</p>
+                        <button class="view-btn" onclick="openModal(this)">View Details</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="suits">
+                    <img src="images/IMG-20250606-WA0010.jpg" alt="Charcoal Grey Suit">
+                    <div class="gallery-overlay">
+                        <h3>Charcoal Grey Suit</h3>
+                        <p>Modern slim-fit business suit</p>
+                        <button class="view-btn" onclick="openModal(this)">View Details</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="suits">
+                    <img src="images/IMG-20250606-WA0011.jpg" alt="Brown Tweed Suit">
+                    <div class="gallery-overlay">
+                        <h3>Brown Tweed Suit</h3>
+                        <p>Classic country-style tweed suit</p>
+                        <button class="view-btn" onclick="openModal(this)">View Details</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="formal">
+                    <img src="images/IMG-20250606-WA0013.jpg" alt="White Dinner Jacket">
+                    <div class="gallery-overlay">
+                        <h3>White Dinner Jacket</h3>
+                        <p>Summer formal wear with black trousers</p>
+                        <button class="view-btn" onclick="openModal(this)">View Details</button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="formal">
+                    <img src="images/IMG-20250606-WA0014.jpg" alt="Morning Coat">
+                    <div class="gallery-overlay">
+                        <h3>Morning Coat</h3>
+                        <p>Traditional morning dress for weddings</p>
+                        <button class="view-btn" onclick="openModal(this)">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Women's Wear -->
+                <div class="gallery-item" data-category="women">
+                    <img src="images/IMG-20250606-WA0015.jpg" alt="Custom Evening Dress">
+                    <div class="gallery-overlay">
+                        <h3>Custom Evening Dress</h3>
+                        <p>Elegant silk evening gown</p>
+                        <button class="view-btn" onclick="openModal(this)">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="/placeholder.svg" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <div class="modal-details">
+                    <p><strong>Service:</strong> <span id="modalService"></span></p>
+                    <p><strong>Timeline:</strong> <span id="modalTimeline"></span></p>
+                    <p><strong>Materials:</strong> <span id="modalMaterials"></span></p>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Request Similar Work</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Inspired by Our Work?</h2>
+                <p>Let us create something beautiful for you. Schedule your consultation today.</p>
+                <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Goley Tailor</h3>
+                    <p>Premium custom tailoring services with over 20 years of experience in creating perfect fits.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Custom Suits</a></li>
+                        <li><a href="#">Alterations</a></li>
+                        <li><a href="#">Formal Wear</a></li>
+                        <li><a href="#">Women's Tailoring</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Juba, Sudan</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+211 92-797-1100</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>goleytailor@gmail.comom</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Goley Tailor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
